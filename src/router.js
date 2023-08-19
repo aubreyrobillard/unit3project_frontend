@@ -3,7 +3,8 @@ import App from "./App";
 import Homepage from "./Pages/Homepage";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
-// import loaders
+import { updateRecipe, deleteRecipe, createRecipe } from "./actions";
+
 // import actions
 
 
@@ -17,9 +18,9 @@ const router = createBrowserRouter(
             </Route>
             <Route path="dashboard" element={<Index/>}/>
             <Route path=":id" element={<Show/>}/>
-            <Route path="create" action={createAction}/>
-            <Route path="update/:id" action={updateAction}/>
-            <Route path="delete/:id" action ={deleteAction}/>
+            <Route path="create" action={createRecipe}/>
+            <Route path="update/:id" action={updateRecipe}/>
+            <Route path="delete/:id" action ={deleteRecipe}/>
         </Route>
 ));
 
