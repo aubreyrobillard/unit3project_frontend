@@ -1,5 +1,5 @@
 // import base URL
-import baseUrl from "./base_url";
+import baseUrl from "./baseUrl";
 
 // redirect routes
 import { redirect } from "react-router-dom";
