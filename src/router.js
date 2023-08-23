@@ -2,11 +2,13 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+
 } from "react-router-dom";
 import App from "./App";
 import Homepage from "./Pages/Homepage";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
+import NewRecipe from "./Pages/NewRecipe";
 import { updateRecipe, deleteRecipe, createRecipe } from "./actions";
 import { oneRecipeLoader, allRecipesLoader } from "./loaders";
 
@@ -20,7 +22,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="dashboard" element={<Index />} loader={allRecipesLoader} />
       <Route path=":id" element={<Show />} loader={oneRecipeLoader} />
-      <Route path="create" action={createRecipe} />
+      <Route path="create" action={createRecipe} element={<NewRecipe/>}/>
       <Route path="update/:id" action={updateRecipe} />
       <Route path="delete/:id" action={deleteRecipe} />
     </Route>
