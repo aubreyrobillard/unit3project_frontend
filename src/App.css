@@ -16,6 +16,63 @@ input[type="radio"] {
   display: none;
 }
 
+/* NewRecipe CSS for screens with a maximum width of 320px (mobile) */
+@media screen and (max-width: 425px) {
+  .newRecipe {
+    background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+/* NewRecipe CSS for screens with a maximum width of 768 (tablet) */
+@media screen and (max-width: 768px) {
+  .newRecipe {
+    background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+/* NewRecipe CSS for screens with a maximum width of 1024 (laptop) */
+@media screen and (max-width: 1024px) {
+  .newRecipe {
+    background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+/* NewRecipe CSS for screens with a maximum width of 1440 (laptop L) */
+@media screen and (max-width: 1440px) {
+  .newRecipe {
+    background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 195vh;
+  }
+}
+
+/* NewRecipe CSS for screens with a maximum width of 2560 (bigger than laptops) */
+@media screen and (max-width: 2560px) {
+  .newRecipe {
+    background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 230vh;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
