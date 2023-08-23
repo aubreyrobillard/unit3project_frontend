@@ -9,6 +9,7 @@ import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import { updateRecipe, deleteRecipe, createRecipe } from "./actions";
 import { oneRecipeLoader, allRecipesLoader } from "./loaders";
+import NewRecipe from "./Pages/NewRecipe";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,7 +21,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="dashboard" element={<Index />} loader={allRecipesLoader} />
       <Route path=":id" element={<Show />} loader={oneRecipeLoader} />
-      <Route path="create" action={createRecipe} />
+      <Route path="create" element={<NewRecipe />} action={createRecipe} />
       <Route path="update/:id" action={updateRecipe} />
       <Route path="delete/:id" action={deleteRecipe} />
     </Route>

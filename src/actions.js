@@ -25,7 +25,7 @@ export const createRecipe = async ({ request }) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newRecipe),
   });
-  return redirect("/");
+  return redirect(`/dashboard`);
 };
 
 //UPDATE
@@ -62,5 +62,5 @@ export const deleteRecipe = async ({ params }) => {
   await fetch(`${baseUrl}/${id}`, {
     method: "DELETE",
   });
-  return redirect("/");
+  return redirect("/dashboard");
 };
