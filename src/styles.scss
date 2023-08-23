@@ -1,0 +1,52 @@
+/* ////////////////////////////INDEX PAGE CSS STARTS//////////////////////////////// */
+
+.index-page-container{
+    background-image: url("../public/images/indexbg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+///////////////////////////////////// Footer Button Index page/////////////////////
+.index-footerAllbutton{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.new-recipe-button, .logout-button, .delete-account-button {
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255,0.5);
+}
+
+  
+  /* ////////////////////////////INDEX PAGE CSS STARTS//////////////////////////////// */
+
+  @media screen and (max-width: 425px){
+    .index-page-container{
+        background-image: url("../public/images/indexbg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-position: center;
+        height: 100vh;
+      }
+    ///////////////////////////////////// Footer Button Index page/////////////////////
+    .index-footerAllbutton{
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .new-recipe-button, .logout-button, .delete-account-button {
+        font-weight: 500;
+        font-size: 12px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 255,0.5);
+    }
+  }
