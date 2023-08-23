@@ -16,7 +16,7 @@ input[type="radio"] {
   display: none;
 }
 
-/* NewRecipe CSS for screens with a maximum width of 320px (mobile) */
+/* NewRecipe CSS for screens with a maximum width of 425px (mobile) */
 @media screen and (max-width: 425px) {
   .newRecipe {
     background-image: url("../public/backgroungImgs/NewRecipe.jpg");
