@@ -4,7 +4,16 @@ import { FaStar } from "react-icons/fa";
 const StarRating = () => {
   const [rating, setRating] = useState(null);
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        padding: "10px",
+        borderRadius: "10px",
+      }}
+    >
       {[...Array(5)].map((star, i) => {
         const ratingValue = i + 1;
 
