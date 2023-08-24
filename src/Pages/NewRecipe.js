@@ -13,11 +13,17 @@ function NewRecipe(props) {
       <Form action="/create" method="post" className="recipe-form">
         <input type="text" name="name" placeholder="Recipe Name" />
         <input type="text" name="image" placeholder="Recipe Image" />
-        <input type="text" name="ingredients" placeholder="Ingredients" />
-        <input
-          type="text"
+        <textarea
+          name="ingredients"
+          placeholder="Ingredients"
+          className="recipe-ingredient-input"
+          rows="4"
+        />
+        <textarea
           name="instructions"
           placeholder="Recipe Directions"
+          className="recipe-directions-input"
+          rows="4"
         />
         <input type="text" name="prepTime" placeholder="Prep Time" />
         <input type="text" name="cookTime" placeholder="Cooking Time" />
