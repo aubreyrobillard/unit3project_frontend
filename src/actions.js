@@ -47,7 +47,7 @@ export const updateRecipe = async ({ request, params }) => {
   };
   // send updatedRecipe to backend
   await fetch(`${baseUrl}/${id}`, {
-    method: "POST",
+    method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updatedRecipe),
   });

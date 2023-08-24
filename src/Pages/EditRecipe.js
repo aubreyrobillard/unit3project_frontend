@@ -18,14 +18,14 @@ function EditRecipe(params) {
 
     <h2>Edit the {oneRecipe.name} Recipe</h2>
 
-    <Form action="/update/:id" method="PUT" className="edit-recipe-form">
-      <input type="text" name="name" defaultValue={oneRecipe.name}/>
-      <input type="text" name="image" defaultValue={oneRecipe.image} />
-      <input type="text" name="ingredients" defaultValue={oneRecipe.ingredients} />
-      <input type="text" name="instructions" defaultValue={oneRecipe.instructions}/>
-      <input type="text" name="prepTime" defaultValue={oneRecipe.prepTime} />
-      <input type="text" name="cookingTime" defaultValue={oneRecipe.cookingTime} />
-      <input type="text" name="author" defaultValue={oneRecipe.author} />
+    <Form action={`/update/${oneRecipe._id}`} method="POST" className="edit-recipe-form">
+      <input type="text" name="name" placeholder="Recipe Name" defaultValue={oneRecipe.name}/>
+      <input type="text" name="image" placeHolder="Recipe Image URL" defaultValue={oneRecipe.image} />
+      <input type="text" name="ingredients" placeHolder="Ingredients" defaultValue={oneRecipe.ingredients} />
+      <input type="text" name="instructions" placeHolder="Instructions" defaultValue={oneRecipe.instructions}/>
+      <input type="text" name="prepTime" placeHolder="Prep Time" defaultValue={oneRecipe.prepTime} />
+      <input type="text" name="cookingTime" placeHolder="Cooking Time" defaultValue={oneRecipe.cookingTime} />
+      <input type="text" name="author" placeHolder="Author" defaultValue={oneRecipe.author} />
       {<StarRating />}
       <input type="submit" value="Update Recipe" />
     </Form>
