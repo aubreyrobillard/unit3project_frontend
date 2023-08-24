@@ -1,52 +1,330 @@
 /* ////////////////////////////INDEX PAGE CSS STARTS//////////////////////////////// */
+  /* ////////////////////////////Media Query 425//////////////////////////////// */
 
-.index-page-container{
-    background-image: url("../public/images/indexbg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
-///////////////////////////////////// Footer Button Index page/////////////////////
-.index-footerAllbutton{
+  @media only screen and (max-width: 425px) and (min-width:280px) {
+    .recipe-item-grid{
+        height: 880px;
+        overflow-y: auto;
+    }
+    .index-page-container{
+        background-image: url("../public/images/indexbg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:left;
+        min-height: 100vh;
+        width: 100%;       
+      }
+      .title-Index-pg{
+        text-align: center;
+        font-weight: 900;
+        font-size: 3em;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+      }
+      .recipe-ItemName{
+        color:black;
+        border-radius: 20px;
+        padding:5px 10px 5px 10px;
+      }
+      .recipe-item-grid .recipe-item:nth-child(odd) .recipe-ItemName{
+        background-color: rgba(240, 199, 207, 0.8); 
+      }
+      .recipe-item-grid .recipe-item:nth-child(even) .recipe-ItemName{
+        background-color: #a9dfe8
+      }
+      .recipe-item h1{
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    
+      .recipe-item a{
+        text-decoration: none;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+        text-align: center;
+        margin-bottom: 20px;
+
+       
+      }
+      .index-footerAllbutton{
     display: flex;
     justify-content: space-around;
     position: fixed;
     bottom: 0;
     width: 100%;
     margin-bottom: 15px;
-}
-.new-recipe-button, .logout-button, .delete-account-button {
-    font-weight: 500;
-    font-size: 22px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 255,0.5);
-}
-
-  
-  /* ////////////////////////////INDEX PAGE CSS STARTS//////////////////////////////// */
-
-  @media screen and (max-width: 425px){
-    .index-page-container{
-        background-image: url("../public/images/indexbg.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        // background-position: center;
-        height: 100vh;
-      }
-    ///////////////////////////////////// Footer Button Index page/////////////////////
-    .index-footerAllbutton{
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        margin-bottom: 15px;
-    }
+    } 
     .new-recipe-button, .logout-button, .delete-account-button {
         font-weight: 500;
         font-size: 12px;
         border-radius: 10px;
-        background-color: rgba(0, 0, 255,0.5);
+        background-color: #a9dfe8
+    }  
+    .new-recipe-button:hover, .logout-button:hover, .delete-account-button:hover {
+        background-color: rgba(105, 105, 146, 0.5);
+    }  
+  }
+
+  /* ////////////////////////////Media Query 768//////////////////////////////// */
+
+   @media only screen and (max-width: 768px) and (min-width:425px) {
+    .recipe-item-grid{
+        height: 850px;
+        overflow-y: auto;
     }
+
+    .index-page-container{
+        background-image: url("../public/images/indexbg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:left;
+        min-height: 100vh;
+        width: 100%;       
+      }
+      .title-Index-pg{
+        text-align: center;
+        font-weight: 900;
+        font-size: 3em;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+      }
+      .recipe-ItemName{
+        // background-color: rgba(240, 199, 207,0.6);
+        color:black;
+        border-radius: 25px;
+        padding:5px 10px 5px 10px;
+      }
+      .recipe-item-grid .recipe-item:nth-child(odd) .recipe-ItemName{
+        background-color: rgba(240, 199, 207, 0.8); 
+      }
+      .recipe-item-grid .recipe-item:nth-child(even) .recipe-ItemName{
+        background-color: #a9dfe8
+      }
+
+      .recipe-item h1{
+        margin-top: 20px;
+      }
+
+      .recipe-item a{
+        text-decoration: none;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+        text-align: center;
+        margin-bottom: 20px;
+       
+      }
+      .index-footerAllbutton{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    } 
+    .new-recipe-button, .logout-button, .delete-account-button {
+        font-weight: 500;
+        font-size: 18px;
+        border-radius: 10px;
+        background-color: #a9dfe8
+    }  
+    .new-recipe-button:hover, .logout-button:hover, .delete-account-button:hover {
+        background-color: rgba(105, 105, 146, 0.5);
+    }  
+  }
+  /* ////////////////////////////Media Query 1110//////////////////////////////// */
+
+  @media only screen and (max-width: 1110px) and (min-width:768px) {
+
+
+    .recipe-item-grid{
+        height: 450px;
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        margin-left:300px;
+    }
+    .recipe-item-grid .recipe-item:nth-child(4n -2) .recipe-ItemName, 
+    .recipe-item-grid .recipe-item:nth-child(4n -1) .recipe-ItemName
+    {
+        background-color: #a9dfe8
+    }
+    .index-page-container{
+        background-image: url("../public/images/indexbg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100vh;
+        width: 100%;       
+      }
+      .title-Index-pg{
+        text-align: center;
+        font-weight: 900;
+        font-size: 3em;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+      }
+      .recipe-ItemName{
+        background-color: #F0C7CF;
+        color:black;
+        border-radius: 25px;
+        padding:5px 10px 5px 10px;
+      }
+      .recipe-item h1{
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    
+
+      .recipe-item a{
+        text-decoration: none;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+        text-align: center;
+        margin-bottom: 20px;
+       
+      }
+      .index-footerAllbutton{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    } 
+    .new-recipe-button, .logout-button, .delete-account-button {
+        font-weight: 500;
+        font-size: 24px;
+        border-radius: 10px;
+        background-color: #a9dfe8
+    }  
+    .new-recipe-button:hover, .logout-button:hover, .delete-account-button:hover {
+        background-color: rgba(105, 105, 146, 0.5);
+    }  
+  }
+/////////////////////////////////1448 STARTS/////////////////////////////////////////////
+
+  @media only screen and (max-width: 1448px) and (min-width:1111px) {
+    .recipe-item-grid{
+        height: 450px;
+        overflow-y: auto;
+        display: grid;
+        margin-left:450px;
+        grid-template-columns:repeat(3, 1fr);
+    }
+    .recipe-item-grid .recipe-item:nth-child(odd) .recipe-ItemName, 
+    .recipe-item-grid .recipe-item:nth-child(6n -3) .recipe-ItemName
+    {
+        background-color: #a9dfe8
+    }
+    .index-page-container{
+        background-image: url("../public/images/indexbg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100vh;
+        width: 100%;       
+      }
+      .title-Index-pg{
+        text-align: center;
+        font-weight: 900;
+        font-size: 3em;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+      }
+      .recipe-ItemName{
+        background-color: #F0C7CF;
+        color:black;
+        border-radius: 25px;
+        padding:5px 10px 5px 10px;
+      }
+      .recipe-item h1{
+        margin-top: 20px;
+        font-size: 25px;
+
+      }
+
+      .recipe-item a{
+        text-decoration: none;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+        text-align: center;
+        margin-bottom: 20px;
+       
+      }
+      .index-footerAllbutton{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    } 
+    .new-recipe-button, .logout-button, .delete-account-button {
+        font-weight: 500;
+        font-size: 24px;
+        border-radius: 10px;
+        background-color:#a9dfe8
+    }  
+    .new-recipe-button:hover, .logout-button:hover, .delete-account-button:hover {
+        background-color: rgba(105, 105, 146, 0.5);
+    }  
+  }
+  ////////////////////////////////////////////////////////////2560/////////////////
+
+ @media only screen and (max-width: 2560px) and (min-width:1448px) {
+    .recipe-item-grid{
+        height: 450px;
+        overflow-y: auto;
+        display: grid;
+        margin-left:600px;
+        grid-template-columns:repeat(3, 1fr);
+    }
+    .recipe-item-grid .recipe-item:nth-child(odd) .recipe-ItemName, 
+    .recipe-item-grid .recipe-item:nth-child(6n -3) .recipe-ItemName
+    {
+        background-color: #a9dfe8
+    }
+
+    .index-page-container{
+        background-image: url("../public/images/indexbg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100vh;
+        width: 100%;       
+      }
+      .title-Index-pg{
+        text-align: center;
+        font-weight: 900;
+        font-size: 3em;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+      }
+      .recipe-ItemName{
+        background-color: #F0C7CF;
+        color:black;
+        border-radius: 25px;
+        padding:5px 10px 5px 10px;
+      }
+      .recipe-item h1{
+        margin-top: 20px;
+        font-size: 25px;
+
+      }
+
+      .recipe-item a{
+        text-decoration: none;
+        font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+        text-align: center;
+        margin-bottom: 20px;
+       
+      }
+      .index-footerAllbutton{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    } 
+    .new-recipe-button, .logout-button, .delete-account-button {
+        font-weight: 500;
+        font-size: 24px;
+        border-radius: 10px;
+        background-color: #a9dfe8
+    }  
+    .new-recipe-button:hover, .logout-button:hover, .delete-account-button:hover {
+        background-color: rgba(105, 105, 146, 0.5);
+    } 
   }

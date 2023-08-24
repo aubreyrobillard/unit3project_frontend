@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, Link, useLoaderData, Form } from "react-router-dom";
 import baseUrl from "../baseUrl";
 import StarRating from "../Components/StarRating";
+import Header from "../Components/Header";
 
 
 function Index(props) {
@@ -10,26 +11,26 @@ function Index(props) {
 
   return (
   <div className="index-page-container">
-    <div>
-        {/* Header */}
-        <Link to="/" className="index-header">
-        <div>Taste Tally App</div>
-        </Link>
-    </div>
-
+    {<Header />}
         {/* Main Content */}
     <div className="index-content">
-      <h1>Taste Tally</h1>
+      <h1 className="title-Index-pg">Recipes</h1>
+      <div className="recipe-item-grid">
+        
         {allRecipes.map((recipe, index) => {
         return (
         <div key={recipe._id} className="recipe-item">
           <Link to={`/${recipe._id}`}>
-          <h1>{recipe.name}</h1>
+          <h1><span className="recipe-ItemName">{recipe.name}</span></h1>
           </Link>
         </div>
         );
         })}
+        </div>
+   
+
     </div>
+    {/*/////////////////////////////////////////////////BUTTON////////////////////////////////////////////// */}
 
           {/* Footer */}
     <div className="index-footerAllbutton" >
