@@ -8,8 +8,9 @@ import Homepage from "./Pages/Homepage";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import { updateRecipe, deleteRecipe, createRecipe } from "./actions";
-import { oneRecipeLoader, allRecipesLoader } from "./loaders";
+import { oneRecipeLoader, allRecipesLoader, editRecipeLoader } from "./loaders";
 import NewRecipe from "./Pages/NewRecipe";
+import EditRecipe from "./Pages/EditRecipe";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +23,8 @@ const router = createBrowserRouter(
       <Route path="dashboard" element={<Index />} loader={allRecipesLoader} />
       <Route path=":id" element={<Show />} loader={oneRecipeLoader} />
       <Route path="create" element={<NewRecipe />} action={createRecipe} />
-      <Route path="update/:id" action={updateRecipe} />
+      <Route path=":id/edit" element={<EditRecipe/>} loader={editRecipeLoader}/>
+      <Route path="update/:id" action={updateRecipe}/>
       <Route path="delete/:id" action={deleteRecipe} />
     </Route>
   )
