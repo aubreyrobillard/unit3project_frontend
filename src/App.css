@@ -24,15 +24,18 @@ input[type="radio"] {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: small;
   }
 
   .newRecipe h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    background-color: rgba(240, 255, 255, 0.344);
+    border-radius: 15px;
+    padding: 10px 20px;
   }
 
   .recipe-form {
@@ -54,6 +57,7 @@ input[type="radio"] {
     border-radius: 10px;
     background-color: rgba(0, 0, 255, 0.5);
     margin-top: 10px;
+    padding: 2px;
   }
 
   .back-to-recipes-button {
@@ -63,9 +67,22 @@ input[type="radio"] {
     background-color: rgba(0, 0, 255, 0.5);
   }
 
+  .header {
+    display: none;
+  }
+
+  .recipe-ingredient-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+    border: 2px solid #A3C8CE;
+  }
 }
 
-/* NewRecipe CSS for screens with a maximum width of 768 (tablet) */
+/* NewRecipe CSS for screens with a maximum width of 768px (tablet) */
 @media screen and (max-width: 768px) {
   .newRecipe {
     background-image: url("../public/backgroungImgs/NewRecipe.jpg");
@@ -73,7 +90,66 @@ input[type="radio"] {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .newRecipe h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recipe-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .recipe-form input[type="submit"] {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: 5px;
+    padding: 2px;
+  }
+
+  .back-to-recipes-button {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: -5px;
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .recipe-ingredient-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+
 }
 
 /* NewRecipe CSS for screens with a maximum width of 1024 (laptop) */
@@ -84,19 +160,177 @@ input[type="radio"] {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .newRecipe h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recipe-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .recipe-form input[type="submit"] {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: 5px;
+    padding: 2px;
+  }
+
+  .back-to-recipes-button {
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #A3C8CE;
+    margin-top: -5px;
+    padding: 2px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #A3C8CE;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .recipe-form input[name="instructions"] {
+    height: auto;
+    min-height: 150px;
+  }
+
+  .recipe-directions-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+
+  .recipe-form input,
+  .recipe-directions-input {
+    border-radius: 10px;
+    border: 2px solid #A3C8CE;
+  }
+
+  .recipe-ingredient-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+
 }
 
 /* NewRecipe CSS for screens with a maximum width of 1440 (laptop L) */
 @media screen and (max-width: 1440px) {
   .newRecipe {
     background-image: url("../public/backgroungImgs/NewRecipe.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    width: 195vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .newRecipe h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recipe-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .recipe-form input[type="submit"] {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: 5px;
+    padding: 2px;
+  }
+
+  .back-to-recipes-button {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: -5px;
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .recipe-form input[name="instructions"] {
+    height: auto;
+    min-height: 150px;
+  }
+
+  .recipe-directions-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+
+  .recipe-form input,
+  .recipe-directions-input {
+    border-radius: 10px;
+    border: 2px solid #A3C8CE;
+  }
+
+  .recipe-ingredient-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+
 }
 
 /* NewRecipe CSS for screens with a maximum width of 2560 (bigger than laptops) */
@@ -108,6 +342,98 @@ input[type="radio"] {
     background-position: center;
     height: 100vh;
     width: 230vh;
+  }
+
+  .newRecipe h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recipe-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .recipe-form input[type="submit"] {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: 5px;
+    padding: 2px;
+  }
+
+  .back-to-recipes-button {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: -5px;
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .recipe-ingredient-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 2560px) {
+
+  .recipe-form input,
+  .recipe-directions-input {
+    border-radius: 10px;
+    border: 2px solid #A3C8CE;
+    width: 400px;
+  }
+
+  .recipe-form input[type="submit"] {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    margin-top: 5px;
+    padding: 2px;
+    width: 103px;
+  }
+
+  .back-to-recipes-button {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #A3C8CE;
+    border: 2px solid #A3C8CE;
+    border-color: #A3C8CE;
+    margin-top: -5px;
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+
+  .recipe-ingredient-input {
+    border-radius: 10px;
+    border: 2px solid #A3C8CE;
+    width: 400px;
   }
 }
 

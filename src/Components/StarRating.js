@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { GiCookingGlove } from "react-icons/gi";
 
 const StarRating = () => {
   const [rating, setRating] = useState(null);
@@ -25,9 +25,9 @@ const StarRating = () => {
               value={ratingValue}
               onClick={() => setRating(ratingValue)}
             />
-            <FaStar
+            <GiCookingGlove
               className="star"
-              color={ratingValue <= rating ? "#ffc107" : "#e4e5e9"}
+              color={ratingValue <= rating ? "#D25251" : "#BAC3C2"}
               size={30}
             />
           </label>
