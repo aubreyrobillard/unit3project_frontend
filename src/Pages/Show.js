@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom'
 function Show(props) {
     const navigate = useNavigate();
     const oneRecipe = useLoaderData();
-    const ingredients = (oneRecipe.ingredients).split(',')
 
     return (
 
@@ -14,7 +13,7 @@ function Show(props) {
 
             <h1>{oneRecipe.name}</h1>
             <img src={oneRecipe.image} alt={oneRecipe.name}></img>
-            <h3>Ingredients: {ingredients}</h3>
+            <h3>Ingredients: {oneRecipe.ingredients}</h3>
             <h3>Directions: {oneRecipe.instructions}</h3>
             <h2>Prep Time: {oneRecipe.prepTime}</h2>
             <h2>Cook Time: {oneRecipe.cookingTime}</h2>
@@ -37,7 +36,7 @@ function Show(props) {
         {/*  Edit Recipe Button */}
         <button
             className="edit-recipe-button"
-            onClick={() => navigate("/update/:id")}
+            onClick={() => navigate(`edit`)}
         >Edit Recipe</button>
 
         {/*  Delete Recipe Button */}

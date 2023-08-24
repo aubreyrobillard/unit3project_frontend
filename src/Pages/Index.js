@@ -3,6 +3,7 @@ import { useNavigate, Link, useLoaderData, Form } from "react-router-dom";
 import baseUrl from "../baseUrl";
 import StarRating from "../Components/StarRating";
 
+
 function Index(props) {
   const allRecipes = useLoaderData();
   const navigate = useNavigate();

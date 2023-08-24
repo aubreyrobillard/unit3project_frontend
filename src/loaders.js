@@ -20,8 +20,15 @@ export const allRecipesLoader = async () => {
 
   // call backend index route
   const indexResponse = await fetch(`${baseUrl}`);
-  // conver to json object
+  // convert to json object
   const allRecipes = await indexResponse.json();
   // return recipes
   return allRecipes;
 };
+
+export const editRecipeLoader = async ({params}) => {
+  const id = params.id;
+  const showResponse = await fetch(`${baseUrl}/${id}`);
+  const editRecipe = await showResponse.json()
+  return editRecipe
+}
