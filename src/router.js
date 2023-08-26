@@ -14,18 +14,14 @@ import EditRecipe from "./Pages/EditRecipe";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route path="" element={<Homepage />}>
-        {/* Add routes in if signup/login done */}
-        {/* <Route path="/signup" element={<Signup/>}/> */}
-        {/* <Route path="/login" element={<Login/>}/> */}
-      </Route>
-      <Route path="dashboard" element={<Index />} loader={allRecipesLoader} />
-      <Route path=":id" element={<Show />} loader={oneRecipeLoader} />
-      <Route path="create" element={<NewRecipe />} action={createRecipe} />
+    <Route path="/" element={<App/>}>
+      <Route path="" element={<Homepage/>}/>
+      <Route path="dashboard" element={<Index />} loader={allRecipesLoader}/>
+      <Route path=":id" element={<Show />} loader={oneRecipeLoader}/>
+      <Route path="create" element={<NewRecipe />} action={createRecipe}/>
       <Route path=":id/edit" element={<EditRecipe/>} loader={editRecipeLoader}/>
       <Route path="update/:id" action={updateRecipe}/>
-      <Route path="delete/:id" action={deleteRecipe} />
+      <Route path="delete/:id" action={deleteRecipe}/>
     </Route>
   )
 );
