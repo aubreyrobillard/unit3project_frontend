@@ -8,6 +8,7 @@ import { redirect } from "react-router-dom";
 export const createRecipe = async ({ request }) => {
   // form data
   const formData = await request.formData();
+  console.log(formData);
   // new recipe object
   const newRecipe = {
     name: formData.get("name"),
@@ -19,6 +20,7 @@ export const createRecipe = async ({ request }) => {
     author: formData.get("author"),
     star: formData.get("star"),
   };
+  console.log(formData);
   //send newRecipe to backend
   await fetch(`${baseUrl}`, {
     method: "POST",

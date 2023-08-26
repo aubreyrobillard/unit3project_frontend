@@ -21,7 +21,7 @@ const StarRating = () => {
           <label key={i}>
             <input
               type="radio"
-              name="rating"
+              name="star"
               value={ratingValue}
               onClick={() => setRating(ratingValue)}
             />

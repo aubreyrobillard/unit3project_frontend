@@ -1,11 +1,13 @@
+import React, { useState } from "react";
+import { GiCookingGlove } from "react-icons/gi";
 import { Form, useNavigate } from "react-router-dom";
-import StarRating from "../Components/StarRating";
 import Header from "../Components/Header";
-import React from "react";
 import "../App.css";
 
 function NewRecipe(props) {
   const navigate = useNavigate();
+  const [rating, setRating] = useState(null);
+
   return (
     <div className="newRecipe">
       {<Header />}
@@ -28,7 +30,38 @@ function NewRecipe(props) {
         <input type="text" name="prepTime" placeholder="Prep Time" />
         <input type="text" name="cookTime" placeholder="Cooking Time" />
         <input type="text" name="author" placeholder="Author of Recipe" />
-        {<StarRating />}
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            padding: "10px",
+            borderRadius: "10px",
+          }}
+        >
+          {[...Array(5)].map((star, i) => {
+            const ratingValue = i + 1;
+
+            return (
+              <label key={i}>
+                <input
+                  type="radio"
+                  name="star"
+                  value={ratingValue}
+                  onClick={() => setRating(ratingValue)}
+                />
+                <GiCookingGlove
+                  className="star"
+                  color={ratingValue <= rating ? "#D25251" : "#BAC3C2"}
+                  size={30}
+                />
+              </label>
+            );
+          })}
+        </div>
+
         <input type="submit" value="Add Recipe" />
       </Form>
       <button
