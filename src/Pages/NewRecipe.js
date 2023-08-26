@@ -28,7 +28,7 @@ function NewRecipe(props) {
           rows="4"
         />
         <input type="text" name="prepTime" placeholder="Prep Time" />
-        <input type="text" name="cookTime" placeholder="Cooking Time" />
+        <input type="text" name="cookingTime" placeholder="Cooking Time" />
         <input type="text" name="author" placeholder="Author of Recipe" />
 
         <div
