@@ -17,7 +17,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App/>}>
       <Route path="" element={<Homepage/>}/>
       <Route path="dashboard" element={<Index />} loader={allRecipesLoader}/>
-      <Route path=":id" element={<Show />} loader={oneRecipeLoader}/>
+      <Route path=":id" element={<Show/>} loader={oneRecipeLoader}/>
       <Route path="create" element={<NewRecipe />} action={createRecipe}/>
       <Route path=":id/edit" element={<EditRecipe/>} loader={editRecipeLoader}/>
       <Route path="update/:id" action={updateRecipe}/>
