@@ -36,16 +36,7 @@ function Index(props) {
     <div className="index-footerAllbutton" >
           {/* Add New Recipe Button */}  
       <button className="new-recipe-button"
-      onClick={() => navigate("/create")}>Add New Recipe</button>
-
-          {/* Logout button */}
-      <button className="logout-button"
-      onClick={async () => {await fetch(`${baseUrl}/logout`);
-      localStorage.removeItem("loggedIn");navigate("/");}}> Logout</button>
-
-          {/* Delete Account Button */}
-      <button className="delete-account-button"
-      onClick={() => navigate("/")}>Delete Account</button>        
+      onClick={() => navigate("/create")}>Add New Recipe</button>     
     </div>      
   </div>
   );
