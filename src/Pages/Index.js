@@ -16,7 +16,7 @@ function Index(props) {
     <div className="index-content">
       <h1 className="title-Index-pg">Recipes</h1>
       <div className="recipe-item-grid">
-        
+        {console.log(allRecipes)}
         {allRecipes.map((recipe, index) => {
         return (
         <div key={recipe._id} className="recipe-item">
@@ -30,7 +30,7 @@ function Index(props) {
    
 
     </div>
-    {/*/////////////////////////////////////////////////BUTTON////////////////////////////////////////////// */}
+      {/*/////////////////////////////////////////////////BUTTON////////////////////////////////////////////// */}
 
           {/* Footer */}
     <div className="index-footerAllbutton" >

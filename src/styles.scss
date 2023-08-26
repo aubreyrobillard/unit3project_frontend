@@ -328,3 +328,188 @@
         background-color: rgba(105, 105, 146, 0.5);
     } 
   }
+  //////////////////////////////////////////////////////////////End of Index Page//////////////////////////////////////
+  /// 
+.editRecipePage{
+  background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height:100vh;
+  font-family: "'Bricolage Grotesque', 'GFS Neohellenic', sans-serif";
+  font-weight: 900;
+}
+.starRating{
+  margin-top: 20px;
+}
+.editPage-button{
+  border-radius: 12px;
+  font-size: 17px;
+  padding:5px;
+  font-weight: 700;
+  background-color: #a9dfe8;
+
+}
+.editPage-button:hover{
+background-color: aquamarine;
+}
+.extra1{
+  margin-top:10px;
+}
+        //Form Element//
+
+        @media only screen and (max-width: 425px) and (min-width:280px) 
+        {
+          .editRecipePage{
+            background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vw;
+            min-height:100vh;
+          }
+          .starRating{
+            width: 220px;
+          }
+          .editpage-formElement h2{
+            font-size: 19px;
+            font-weight: 900;
+          }
+          .editInputBox{
+            width: 280px;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 5px;
+          }
+          .extra{
+            height: 125px;
+          }
+
+        }
+
+        @media only screen and (max-width: 768px) and (min-width:425px) {
+          .editRecipePage{
+            background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vw;
+            min-height:100vh;
+          }
+          .starRating{
+            width: 220px;
+          }
+          .editpage-formElement h2{
+            font-size: 19px;
+            font-weight: 900;
+          }
+          .editInputBox{
+            width: 280px;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 5px;
+          }
+          .extra{
+            height: 125px;
+          }
+        }
+
+        @media only screen and (max-width: 1110px) and (min-width:768px) {
+         
+          .editRecipePage{
+            background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vw;
+            min-height:100vh;
+          }
+          .starRating{
+            width: 320px;
+          }
+          .editpage-formElement h2{
+            font-size: 35px;
+            font-weight: 900;
+          }
+          .editLabel{
+            font-size: 25px;
+          }
+          .editInputBox{
+            width: 380px;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 5px;
+          }
+          .extra{
+            height: 125px;
+          }
+        }
+
+        @media only screen and (max-width: 1448px) and (min-width:1111px) {
+                 
+          .editRecipePage{
+            background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vw;
+            min-height:100vh;
+          }
+          .starRating{
+            width: 320px;
+          }
+          .editpage-formElement h2{
+            font-size: 35px;
+            font-weight: 900;
+          }
+          .editLabel{
+            font-size: 25px;
+          }
+          .editInputBox{
+            width: 380px;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 5px;
+          }
+          .extra{
+            height: 125px;
+          }
+        
+        }
+
+        @media only screen and (max-width: 2560px) and (min-width:1448px) {
+          .editRecipePage{
+            background-image: url("../public/backgroungImgs/NewRecipe.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vw;
+            min-height:100vh;
+          }
+          .starRating{
+            width: 320px;
+          }
+          .editpage-formElement h2{
+            font-size: 30px;
+            font-weight: 900;
+          }
+          .editLabel{
+            font-size: 30px;
+          }
+          .editInputBox{
+            width: 580px;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 5px;
+          }
+          .extra{
+            height: 125px;
+          }
+        }
